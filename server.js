@@ -1,10 +1,13 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
+require('dotenv').config();
 
 app.get(["/", "/:name"], (req, res) => {
   greeting = "<h1>Hello From Node on Fly!</h1>";
-  name = req.params["name"];
+
+  name = process.env.DB_PASSWORD ?? req.params["name"];
+
   if (name) {
     res.send(greeting + "</br>and hello to " + name);
   } else {
