@@ -19,6 +19,7 @@
   "homepage": "https://github.com/fly-examples/hellonode#readme",
   "dependencies": {
     "dotenv": "^16.0.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongodb": "^4.10.0"
   }
 }
